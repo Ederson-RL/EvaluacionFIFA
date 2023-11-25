@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
-    'core'
+    'accounts.apps.AccountsConfig',
+    'core',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -85,14 +86,14 @@ WSGI_APPLICATION = 'fifa.wsgi.application'
 
 DATABASES = {
     'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'fifa',
-            'USER': 'root',  # Puedes cambiarlo según tu configuración
-            'PASSWORD': '1234',  # Ingresa tu contraseña de MySQL
-            'HOST': 'localhost',
-            'PORT': '3306',  # Cambia el puerto si es necesario
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'fifa',
+        'USER': 'root',  # Puedes cambiarlo según tu configuración
+        'PASSWORD': '',  # Ingresa tu contraseña de MySQL
+        'HOST': 'localhost',
+        'PORT': '3306',  # Cambia el puerto si es necesario
     }
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -134,4 +135,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #
-#This code is a Django settings file for a project named "fifa". It includes settings for the project's structure, databases, password validation, internationalization, static files, and more. The comments provide explanations for each setting and its purpose..</s>
+# This code is a Django settings file for a project named "fifa". It includes settings for the project's structure, databases, password validation, internationalization, static files, and more. The comments provide explanations for each setting and its purpose..</s>
