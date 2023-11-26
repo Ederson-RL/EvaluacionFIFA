@@ -1,0 +1,43 @@
+{% extends 'baseAuth.html' %}
+
+{% load static %}
+
+{% block titulo %}
+      <title>Inicio de sesion</title>
+{% endblock titulo %}
+
+{% block img %}
+    <img src="{% static 'imgs/WeAre26.png' %}" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; min-height: 600px;" />
+{% endblock img %}
+
+{% block content %}
+    <form method="post" action="{% url 'admin:login' %}" class="login-form">
+
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="d-flex align-items-center mb-3 pb-1">
+            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+            <span class="h1 fw-bold mb-0">Inicio de sesion</span>
+        </div>
+
+        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Ingresar a tu cuenta</h5>
+        <div class="form-outline mb-4">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+        </div>
+
+        <div class="form-outline mb-4">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+        </div>
+
+        <div class="pt-1 mb-4">
+            <button class="btn btn-dark btn-lg btn-block" type="submit">Inicia</button>
+        </div>
+
+        <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="#!" style="color: #393f81;">Regístrate aquí</a></p>
+        <a href="#!" class="small text-muted">Términos de uso.</a>
+        <a href="#!" class="small text-muted">Política de privacidad</a>
+        
+    </form>
+{% endblock %}
