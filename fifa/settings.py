@@ -30,10 +30,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# jazzmin configuration
+JAZZMIN_SETTINGS = {
+    "site_title": "Fifa 2026",
+    "site_logo": "imgs/fifa-logo.png",
+}
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

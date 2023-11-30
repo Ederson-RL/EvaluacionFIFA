@@ -7,6 +7,10 @@ class LoginForm(AuthenticationForm):
     pass
 
 
+class LoginForm(AuthenticationForm):
+    pass
+
+
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(label='Correo electrónico')
     first_name = forms.CharField(label='Nombre')
